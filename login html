@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="main.css"/>
+        <title>Login</title>
+    </head>
+<body>
+    <div class="form">
+    <form method="post" action="loginDetails.php">
+    <h1>Customer Login Here</h1>
+        
+    <label for="name">Username: </label>
+    <input type="text" name="txtName" value="">
+    <br>
+    <br>
+    <label for="password">Password: </label>
+    <input type="password" name="txtPassword" value="">
+    <br>
+    <br>
+    <input type="submit" value="Submit" name="subUser"/>
+    <br>
+    <br>
+    <p>Not already a User? Register <a href="registerCustomers.php"><i>here</i></a></p>
+    </form>
+    
+    </div>
+
+    <div class="form">
+    <form method="post" action="traderDetails.php">
+    <h1>Trader Login Here</h1>
+        
+    <label for="name">Username: </label>
+    <input type="text" name="txtName" value="">
+    <br>
+    <br>
+    <label for="password">Password: </label>
+    <input type="password" name="txtPassword" value="">
+    <br>
+    <br>
+    <input type="submit" value="Submit" name="subTrader"/>
+    <br>
+    <br>
+    <p>Not already a Trader? Register <a href="registerTraders.php"><i>here</i></a></p>
+    </form>
+
+</div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="main.css"/>
+        <title>Register Customer</title>
+    </head>
+<body>
+<form method="post" action="customerSignDetails.php">
+        <h1>Customer Registration Here</h1>
+    <label for="firstName">Firstname: </label>
+    <input type="text" name="txtFirstName" value="">
+    <br>
+    <br>
+    <label for="surname">Surname: </label>
+    <input type="text" name="txtSurname" value="">
+    <br>
+    <br>
+    <label for="email">Email: </label>
+    <input type="text" name="txtEmail" value="">
+    <br>
+    <br>   
+    <label for="name">Username: </label>
+    <input type="text" name="txtName" value="">
+    <br>
+    <br>
+    <label for="age">Age: </label>
+            <select name="age" id="age">
+                <option value="">Please Select</option>
+                <option value="U18">U18</option>
+                <option value="18+">18+</option>
+                <option value="65+">65+</option>
+            </select>
+    <br>
+    <br>
+    <label for="password">Password: </label>
+    <input type="password" name="txtPassword" value="">
+    <br>
+    <br>
+    <label for="pass">Re-type Password: </label>
+    <input type="text" name="txtPass" value="">
+    <br>
+    <br>
+    <p>Do you want to hear promotional offers via email?</p>
+    <input type="checkbox" id="yes" name="yes" value="">
+    <label for="yes">Yes</label>
+    <input type="checkbox" id="no" name="no" value="">
+    <label for="no">No</label>
+    <br>
+    <br>
+    <input type="submit" value="Submit" name="subUser"/>
+    <br>
+    <br>
+    </form>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="main.css"/>
+        <title>Register Trader</title>
+    </head>
+<body>
+<form method="post" action="customerSignDetails.php">
+        <h1>Trader Registration Here</h1>
+    <label for="firstName">Firstname: </label>
+    <input type="text" name="txtFirstName" value="">
+    <br>
+    <br>
+    <label for="surname">Surname: </label>
+    <input type="text" name="txtSurname" value="">
+    <br>
+    <br>
+    <label for="email">Email: </label>
+    <input type="text" name="txtEmail" value="">
+    <br>
+    <br>   
+    <label for="name">Username: </label>
+    <input type="text" name="txtName" value="">
+    <br>
+    <br>
+    <label for="age">Profession: </label>
+            <select name="age" id="age">
+                <option value="">Please Select</option>
+                <option value="paint">Painter</option>
+                <option value="photo">Photographer</option>
+                <option value="scult">Sculpturer</option>
+                <option value="graphic">Graphic Designer</option>
+                <option value="other">Other</option>
+            </select>
+    <br>
+    <br>
+    <label for="password">Password: </label>
+    <input type="password" name="txtPassword" value="">
+    <br>
+    <br>
+    <label for="pass">Re-type Password: </label>
+    <input type="text" name="txtPass" value="">
+    <br>
+    <br>
+    <p>Do you want to hear promotional offers via email?</p>
+    <input type="checkbox" id="yes" name="yes" value="">
+    <label for="yes">Yes</label>
+    <input type="checkbox" id="no" name="no" value="">
+    <label for="no">No</label>
+    <br>
+    <br>
+    <input type="submit" value="Submit" name="subUser"/>
+    <br>
+    <br>
+    </form>
+</body>
+</html>
+
+body{
+    font-family: Verdana, helvetica, Tahoma, sans-serif;
+    font-size: 1em;
+    background-color: lightblue;
+}
+
+div.form{
+    float:left;
+    width: 50%;
+    box-sizing: border-box;
+    border: 5px solid pink;
+}
