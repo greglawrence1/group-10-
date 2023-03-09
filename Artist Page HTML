@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Art Commissioner</title>
+        <style>
+            body {
+                background-color: #bfffff;
+            }
+
+            img {
+                width: 150px;
+                margin-right: 10px;
+            }
+
+            p.mainwebtitle {
+                font-weight: bold;
+                font-size: xx-large;
+            }
+
+            p.welcome {
+                font-weight: bold;
+                font-size: x-large;
+            }
+
+            p.artistname {
+                font-weight: bold;
+                font-size: x-large;
+            }
+            p.webtitles {
+                font-size: x-large;
+            }
+
+            p.bio {
+                font-size: larger;
+            }
+
+            button.contactbutton {
+                background-color: pink;
+                color: blue;
+                border: 2px solid plum;
+                float: none;
+            }
+
+        </style>
+    </head>
+    <body>
+        <img src="images/AC logo.png">
+        <p class="mainwebtitle">Art Commissioner</p>
+        <p class="welcome">Welcome User Name</p>
+        <p class="artistname">Artist Name Profile Page</p>
+        <p class="webtitles">Work Type:</p>
+        <p class="webtitles">Average Rating:</p>
+        <p class="bio">Bio:</p>
+        <button class="contactbutton">Contact Seller</button>
+        <p class="webtitles">Total Sales:</p>
+    </body>
+</html>
