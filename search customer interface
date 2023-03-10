@@ -1,0 +1,108 @@
+<?php
+session_start();
+include 'connection.php';
+?>
+
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+
+<?php
+include 'searchArtist.php';
+if (isset($_POST['submit'])){
+    $q = "SELECT * FROM loginArtist";
+
+    //sorting
+    if (isset($_POST['sort'])){
+        $sort = $_POST['sort'];
+        $_SESSION['sort']= $sort;
+        if($sort=='mosttotalsales'){
+            $sortquery = " ORDER BY TotalSales ASC";
+        }
+        else if($sort=='leasttotalsales'){
+            $sortquery = " ORDER BY TotalSales DESC";
+        }
+        else if($sort=='Ascalphabet'){
+            $sortquery = " ORDER BY artistProfession ASC";
+        }
+        else if($sort=='Descalphabet'){
+            $sortquery = " ORDER BY artistProfession DESC";
+        }
+    }
+    else{
+        $sortquery = "";
+    }
+
+    //search  by name   
+    if (isset($_POST['search'])){
+        $search = $_POST['search'];
+        $_SESSION['search']= $search;
+        $wherequery = " WHERE artistFirstName like '%$search%' OR artistSurname like '%$search%' OR username like '%$search%'";
+        
+    }
+    $query= $q .$sortquery .$wherequery;
+}
+else{
+    $query = 'SELECT * FROM Artist';
+}
+
+$result = mysqli_query($connection, $query);
+$_SESSION['search']= $search;
+    while($row = mysqli_fetch_assoc($result)){
+        echo 'Name: ' .$row['artistFirstName'] .' ' .$row['artistSurname']
+        .'<br />' .$row['artistUsername']
+        .'<br />' .'Work Type: ' .$row['artistProfession']
+        .'<br />' .'Total Sales: ' .$row['TotalSales'].'<br /><br /><br />';
+    }
+?>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+<?php session_start(); ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>    
+</head>
+<body>
+    <form method="POST" action="search.php">
+            <legend><h2>Search</h2></legend>
+            <p>
+            <label for= "search">Search: </label>
+            <input type="text" name="search" value="<?php
+                if (isset($_SESSION['search'])){
+                    echo $_SESSION['search'];
+                    }
+                ?>">
+            </p>
+            <p>
+            <label for="sort">Sort: </label>
+            <select name="sort" id="sort">                  
+                <option selected="true" disabled="true" >Sort: </option>
+                <option value="mosttotalsales">Sales: High to Low</option>
+                <option value="leasttotalsales">Sales: Low to High</option>
+                <option value="Ascalphabet">Alphabet: A to Z</option>
+                <option value="Descalphabet">Alphabet: Z to A</option>
+            </select>
+            </p>
+        <input type="submit" value="Submit" name="submit" />
+        <input type="reset" value="Clear" />
+    </form> 
+
+
+</body>
+</html>
