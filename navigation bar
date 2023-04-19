@@ -44,15 +44,36 @@
                     <li class="nav-item">
                     <a class="nav-link" href="#">Logout</a>
                     </li>
+
+                    <li class="nav-item">
+                        <form style="padding-left: 5px; padding-top: 11px;" class="d-flex input-group w-auto">
+                            <input
+                                type="search"
+                                class="form-control rounded"
+                                placeholder="Search"
+                                aria-label="Search"
+                                aria-describedby="search-addon"
+                                size="35px";
+                            />
+                            <span class="input-group-text border-0" id="search-addon">
+                                <img src="searchicon.png" width="30" height="30">
+                            </span>
+                        </form>
+                    </li>
+
+
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                <!--Insert profile link in placeholder-->
-                <li><a class="nav-link" href="#">@username</a></li>
+                    <li style="padding-top: 19px; padding-right: 15px">
+                        <a href= "#"><img src="messageicon.png" width="30" height="30"></a>
+                    </li>
+                    <!--Insert profile link in placeholder-->
+                    <li style="padding-right: 7px;"><a class="nav-link" href="#">@username</a></li>
                 </ul>
                 </div>
             </div>
         </nav>
 </font>
-    
-</body>
+    </body>
 </html>
+
