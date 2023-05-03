@@ -1,0 +1,22 @@
+.container{
+    padding-top: 2%;
+    font-family: Serif;
+    font-size: 18;
+}
+
+.container .formclass{
+    padding: 10px;
+    border: 0;
+    box-shadow: 0 0 15px 4px rgba(0,0,0,0.09);
+}
+
+.container .formclass{
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.container .sort-style{
+    position: relative;
+    float: right;
+}
+
