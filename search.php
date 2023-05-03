@@ -6,10 +6,12 @@ include 'connection.php';
 <html>
 <head>
     <title>Document</title>
+    <link rel="stylesheet" href="searchstyle.css">
 </head>
 <body>
 
 <?php
+include 'index.php';
 include 'searchArtist.php';
 if (isset($_POST['submit'])){
     $q = "SELECT * FROM loginArtist";
@@ -57,52 +59,6 @@ $_SESSION['search']= $search;
         .'<br />' .'Total Sales: ' .$row['TotalSales'].'<br /><br /><br />';
     }
 ?>
-
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-<?php session_start(); ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search</title>    
-</head>
-<body>
-    <form method="POST" action="search.php">
-            <legend><h2>Search</h2></legend>
-            <p>
-            <label for= "search">Search: </label>
-            <input type="text" name="search" value="<?php
-                if (isset($_SESSION['search'])){
-                    echo $_SESSION['search'];
-                    }
-                ?>">
-            </p>
-            <p>
-            <label for="sort">Sort: </label>
-            <select name="sort" id="sort">                  
-                <option selected="true" disabled="true" >Sort: </option>
-                <option value="mosttotalsales">Sales: High to Low</option>
-                <option value="leasttotalsales">Sales: Low to High</option>
-                <option value="Ascalphabet">Alphabet: A to Z</option>
-                <option value="Descalphabet">Alphabet: Z to A</option>
-            </select>
-            </p>
-        <input type="submit" value="Submit" name="submit" />
-        <input type="reset" value="Clear" />
-    </form> 
-
 
 </body>
 </html>
