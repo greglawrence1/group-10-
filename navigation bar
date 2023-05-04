@@ -98,7 +98,7 @@
         </nav>
     </font>
     <?php
-    include 'footer1.php';
+    include 'footer.php';
     ?>
     </body>
 </html>
