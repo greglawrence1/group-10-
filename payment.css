@@ -1,0 +1,16 @@
+.paymentbox {
+    position: relative;
+    margin: 8% auto;
+    width: 50%;
+    height:500px;
+    padding: 10px;
+    border: 2px solid #b0c7dd;
+    background-color: #f2e3d0;
+    border-radius: 50% 20% / 10% 40%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+    font-family: serif;
+    color: #33628f;
+}
