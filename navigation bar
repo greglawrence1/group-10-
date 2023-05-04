@@ -1,3 +1,4 @@
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -38,9 +39,9 @@
                     <a class="nav-link" href="#">About</a>
                     </li>
 
-                    <!--Contact Us-->
+                    <!--Contact-->
                     <li class="nav-item">
-                    <a class="nav-link" href="contact.php" style="width: 110px;">Contact Us</a>
+                    <a class="nav-link" href="#" style="width: 110px;">Contact Us</a>
                     </li>
                     
                     <!-- Logout -->
@@ -95,9 +96,10 @@
                 </div>
             </div>
         </nav>
-</font>
-<?
-include 'footer.php';
-?>
+    </font>
+    <?php
+    include 'footer1.php';
+    ?>
     </body>
 </html>
+
